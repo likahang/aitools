@@ -1,13 +1,4 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-body{
-  /* 先套用 Noto Sans TC 這個 思源黑體 */
-  font-family: 'Noto Sans TC', sans-serif;
-  color: #FFFFFF;
-	text-decoration: none;
-  line-height: 24px;
-  background: #000;
-}
-
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -59,7 +50,14 @@ table {
 }
 
 
-
+body {
+  /* 先套用 Noto Sans TC 這個 思源黑體 */
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #FFFFFF;
+	text-decoration: none;
+  line-height: 24px;
+  background: #000;
+}
 
 a {
     color:#FFFFFF;
