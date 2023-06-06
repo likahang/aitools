@@ -1,0 +1,511 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body{
+  /* 先套用 Noto Sans TC 這個 思源黑體 */
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #FFFFFF;
+	text-decoration: none;
+  line-height: 24px;
+  background: #000;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+a {
+    color:#FFFFFF;
+  text-decoration: none;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+img{
+  max-width:100%;
+  height: auto;
+}
+/*-------------------------------------*/
+
+
+.header{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #FFFFFF;
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+}
+.logo img{
+	height: 40px;
+	width: 188.99px;
+}
+.header li{
+	margin-left: 20px;
+	line-height: 150%;
+}
+.nav ul{
+	margin-top: 8px;
+	display: flex;
+}
+
+.nav img{
+	display: none;
+	margin-top: 50px;
+}
+
+
+
+.intro h1{
+	font-size: 120px;
+	line-height: 120%;
+  margin-bottom: 60px;
+	font-weight: 900;
+}
+.intro a{
+  font-weight: 900;
+  font-size: 20px;
+	border: 1px solid #FFFFFF;
+	border-radius: 16px;
+	max-width: 160px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+}
+
+.intro a:hover{
+	background: #FFFFFF;
+	color: #020202;
+}
+
+/*--------------------------*/
+.animate{
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 100px;
+  margin-bottom: 160px;
+  }
+  
+  /*box範圍*/
+  .box1,.box2,.box3{
+	width: 180px;
+	height: 180px;
+	position: relative;
+	overflow: hidden;   /*隱藏超出的部分*/
+  }
+  
+  .arrow1,.arrow2,.arrow3{
+	width: 20px;
+	height: 180px;
+	background: #FFFFFF;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%); /*直線的-50%是中心點 <以止作定位*/
+  }
+  
+  .arrow1::after,
+  .arrow2::after,
+  .arrow3::after {
+	content: "";
+	border: 20px solid #FFFFFF;
+	border-radius:0 100% 0 0;
+	border-bottom: none;
+	border-left: none;
+	  width: 100px;
+	  height: 100px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+  }
+  
+  .arrow1::before,
+  .arrow2::before,
+  .arrow3::before {
+	content: "";
+	border: 20px solid #FFFFFF;
+	border-radius:100% 0 0 0;
+	border-bottom: none;
+	border-right: none;
+	  width: 100px;
+	  height: 100px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  }
+
+  /*--------------------------*/
+  .service{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+h2{
+  font-weight: 900;
+	font-size: 32px;
+}
+
+  .service h2{
+	max-width: 414px;
+	margin-right: 24px;
+  }
+  .service h3{
+	max-width: 856px;
+	font-size: 48px;
+    line-height: 57.6px;
+  }
+.service ul{
+  
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+  .feature{
+	max-width: 32.1%;
+	padding: 40px;
+  border: 1px solid #525252;
+	border-radius: 16px;
+  }
+  .feature img{
+	padding-top: 46.67px;
+	padding-bottom: 26.67px;
+  }
+  .feature p{
+	padding-top: 20px;
+	padding-bottom: 40px;
+	max-width: 336px;
+	font-size: 16px;
+  }
+
+/*-------------*/
+h3{
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 38px;
+  color: #FFFFFF;
+  margin-bottom: 80px;
+}
+
+.partner{
+  margin: 0 auto;
+  background: #000;
+  max-width: 1296px;
+  position: relative;
+  margin-top: 160px;
+}
+
+.partner ul{
+  /*負數使ul從partner範圍外排列*/
+  margin-left: -80px;
+  margin-right: -80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1456px;
+}
+.partner li{
+  /*使每個logo中間隔間20px*/
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.partner img{
+  max-width: 160px;
+}
+.mask{
+  position: relative;
+  /*用overflow: hidden隱藏了logo的超出範圍*/
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/*黑色漸層(L)*/
+.mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background-image: linear-gradient(to right, rgb(0, 0, 0) 20%, transparent 100%);
+  width: 150px;
+}
+/*黑色漸層(R)*/
+.mask::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-image: linear-gradient(to left, rgb(0, 0, 0) 20%, transparent 100%);
+  width: 150px;
+}
+/*z-index設定元素的堆疊順序，設定值越高越前面，可以為負數，例如：z-index: -1。另外要注意的是z-index只能在有設定位（position）的元素上才會奏效。*/
+
+
+
+.wrap{
+  max-width: 1296px;
+  margin: 0 auto;
+
+}
+
+
+/*-------------滑動效果---------------*/
+.swiper {
+  max-width: 1296px;
+  color: #FFFFFF;
+  background: #020202;
+  margin-top: 160px;
+
+  
+  --swiper-pagination-color: #FFFFFF;
+  --swiper-pagination-bullet-inactive-color: #525252; /*inactive點點顏色*/
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-horizontal-gap: 8px; /*點點間距是８*/ 
+}
+.swiper-pagination{
+  position: static;
+}
+
+.swiper-pagination-bullet-active {
+  transform: scale(1.5); /*active點點間放大1.5倍*/
+}
+
+.swiper-wrapper{
+  max-width: 416px;
+}
+
+.swiper-slide{
+  left: -12px;
+  max-width: 416px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  background: #FFFFFF14;
+  border-radius: 16px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.rating{
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 351px;
+  height: auto;
+}
+
+.star{ 
+  margin-top: 20px;
+  margin-left: -5px;
+}
+
+.star span{
+  letter-spacing: -7px;
+}
+
+.comment{
+
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.clientInfo{
+margin-bottom: 20px;
+  width: 351px;
+  display: flex;
+}
+
+.clientInfo img{
+  margin-left: 20px;
+
+}
+
+.info{
+  margin-left: 16px;
+
+
+}
+
+.name{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.co{
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 100,
+  'GRAD' -25,
+  'opsz' 20
+}
+/*--------------------------------*/
+
+.swiper-pagination{
+  display: none;
+}
+
+/*-------------iPad以下---------------*/
+@media(max-width:767px){
+  
+.header{
+   margin-top: 8px;
+  }
+
+.header, .intro, .service, .partner{
+  margin-left: 12px;
+  margin-right: 12px;
+  }  
+  
+.wrap{
+  width: 100%;
+}
+
+.nav img{
+	display:block;
+	margin-top: auto;
+}
+.nav ul{
+	display: none;
+}
+
+.intro h1{
+font-size: 48px;
+line-height: 58px;
+}
+
+  .service h2{
+font-size: 20px;
+  }
+  
+  .service h3{
+    margin-top: 24px;
+font-size: 32px;
+line-height: 38px;
+  }
+  
+  .feature{
+    margin-bottom: 12px;
+  }
+  
+.service ul{
+    max-width: 100%;
+    flex-wrap: wrap;
+  justify-content: center;
+  }  
+  
+.feature{
+	max-width: 100%;
+  }
+
+  .swiper{
+  margin: 0 auto;
+   max-width: 375px;
+    margin-top: 60px;
+    display: block;
+  }
+  
+  .swiper-slide{
+    max-width: 351px;
+    left: 0px;
+  }
+ 
+  .swiper-pagination{
+  display: block;
+}
+  .animate{
+    justify-content: center;
+  }
+  
+  .box1,.box2,.box3{
+	width: 117px;
+	height: 117px;
+    
+}
+  .arrow1,.arrow2,.arrow3{
+    width: 13px;
+	height: 117px;
+    
+  }
+  .arrow1::after,
+  .arrow2::after,
+  .arrow3::after{
+    width: 66px;
+	  height: 66px;
+    border: 13px solid #FFFFFF;
+    border-bottom: none;
+    border-left: none;
+    
+  }
+  .arrow1::before,
+  .arrow2::before,
+  .arrow3::before{
+    width: 66px;
+	  height: 66px;
+    border: 13px solid #FFFFFF;
+      border-bottom: none;
+	border-right: none;
+  }
+}
+/*--------------------------------*/
