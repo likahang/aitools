@@ -788,6 +788,8 @@ color: hsl(0, 0%, 50%);
 }
 
 .footerlink{
+  padding-top: 20px;
+  padding-bottom: 20px;
   max-width: 1296px;
   margin: 0 auto;
   display: flex;
