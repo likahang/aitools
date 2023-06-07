@@ -398,116 +398,14 @@ margin-bottom: 20px;
   'GRAD' -25,
   'opsz' 20
 }
-/*--------------------------------*/
 
 .swiper-pagination{
   display: none;
 }
+/*--------------------------------*/
 
-/*-------------iPad以下---------------*/
-@media(max-width:767px){
-  
-.header{
-   margin-top: 8px;
-  }
 
-.header, .intro, .service, .partner{
-  margin-left: 12px;
-  margin-right: 12px;
-  }  
-  
-.wrap{
-  width: 100%;
-}
-
-.nav img{
-	display:block;
-	margin-top: auto;
-}
-.nav ul{
-	display: none;
-}
-
-.intro h1{
-font-size: 48px;
-line-height: 58px;
-}
-
-  .service h2{
-font-size: 20px;
-  }
-  
-  .service h3{
-    margin-top: 24px;
-font-size: 32px;
-line-height: 38px;
-  }
-  
-  .feature{
-    margin-bottom: 12px;
-  }
-  
-.service ul{
-    max-width: 100%;
-    flex-wrap: wrap;
-  justify-content: center;
-  }  
-  
-.feature{
-	max-width: 100%;
-  }
-
-  .swiper{
-  margin: 0 auto;
-   max-width: 375px;
-    margin-top: 60px;
-    display: block;
-  }
-  
-  .swiper-slide{
-    max-width: 351px;
-    left: 0px;
-  }
- 
-  .swiper-pagination{
-  display: block;
-}
-  .animate{
-    justify-content: center;
-  }
-  
-  .box1,.box2,.box3{
-	width: 117px;
-	height: 117px;
-    
-}
-  .arrow1,.arrow2,.arrow3{
-    width: 13px;
-	height: 117px;
-    
-  }
-  .arrow1::after,
-  .arrow2::after,
-  .arrow3::after{
-    width: 66px;
-	  height: 66px;
-    border: 13px solid #FFFFFF;
-    border-bottom: none;
-    border-left: none;
-    
-  }
-  .arrow1::before,
-  .arrow2::before,
-  .arrow3::before{
-    width: 66px;
-	  height: 66px;
-    border: 13px solid #FFFFFF;
-      border-bottom: none;
-	border-right: none;
-  }
-}
 /*---------------Ai工具頁面-----------------*/
-
 .aiToolsWrap{
   margin-top: 160px;
   padding-top: 160px;
@@ -582,9 +480,6 @@ color: #020202;
 line-height: 150%;
 }
 
-
-
-
 .filterBtn{
 padding-top: 20px;
 padding-bottom: 20px;
@@ -594,7 +489,6 @@ border: 1px solid #F2F2F2;
 text-decoration: none;
 line-height: 150%;
 color: #020202;
-
 }
 
 .filterBtn span{
@@ -641,6 +535,7 @@ width: 416px;
 padding-left: 32px;
 padding-right: 32px;
 }
+
 .cardHeader h1{
 font-size: 20px;
 font-weight: 900;
@@ -649,8 +544,8 @@ letter-spacing: 0em;
 text-align: left;
 padding-top: 20px;
 padding-bottom: 12px;
-
 }
+
 .cardHeader p{
 font-size: 14px;
 font-weight: 400;
@@ -675,7 +570,6 @@ padding-left: 32px;
 padding-right: 32px;
 }
 
-
 .author, .link{
 border-top: 1px solid #F2F2F2;
 text-align: right;
@@ -690,6 +584,7 @@ padding-right: 32px;
   font-weight: 700;
 line-height: 150%;
 }
+
 .link a{
 text-decoration: none;
 color: #020202;
@@ -781,7 +676,6 @@ color: hsl(0, 0%, 50%);
   color: #FFFFFF;
 }
 
-
 .footerlogo{
   width: 244.99px;
   height: 40px;
@@ -805,6 +699,7 @@ color: hsl(0, 0%, 50%);
   display: flex;
   text-align: center;
 }
+
 .sns{
 margin-right: 20px;
 }
@@ -817,9 +712,117 @@ margin-right: 20px;
   padding-top: 12px;
   padding-bottom: 12px;
 }
+
 .back span{
   width: 16px;
   height: 16px;
   font-size: 13px;
   margin-left: 12px;
 }
+
+/*-------------iPad以下---------------*/
+@media(max-width:767px){
+  
+  .header{
+     margin-top: 8px;
+    }
+  
+  .header, .intro, .service, .partner{
+    margin-left: 12px;
+    margin-right: 12px;
+    }  
+    
+  .wrap{
+    width: 100%;
+  }
+  
+  .nav img{
+    display:block;
+    margin-top: auto;
+  }
+  .nav ul{
+    display: none;
+  }
+  
+  .intro h1{
+  font-size: 48px;
+  line-height: 58px;
+  }
+  
+    .service h2{
+  font-size: 20px;
+    }
+    
+    .service h3{
+      margin-top: 24px;
+  font-size: 32px;
+  line-height: 38px;
+    }
+    
+    .feature{
+      margin-bottom: 12px;
+    }
+    
+  .service ul{
+      max-width: 100%;
+      flex-wrap: wrap;
+    justify-content: center;
+    }  
+    
+  .feature{
+    max-width: 100%;
+    }
+  
+    .swiper{
+    margin: 0 auto;
+     max-width: 375px;
+      margin-top: 60px;
+      display: block;
+    }
+    
+    .swiper-slide{
+      max-width: 351px;
+      left: 0px;
+    }
+   
+    .swiper-pagination{
+    display: block;
+  }
+    .animate{
+      justify-content: center;
+    }
+    
+    .box1,.box2,.box3{
+    width: 117px;
+    height: 117px;
+      
+  }
+    .arrow1,.arrow2,.arrow3{
+      width: 13px;
+    height: 117px;
+      
+    }
+    .arrow1::after,
+    .arrow2::after,
+    .arrow3::after{
+      width: 66px;
+      height: 66px;
+      border: 13px solid #FFFFFF;
+      border-bottom: none;
+      border-left: none;
+      
+    }
+    .arrow1::before,
+    .arrow2::before,
+    .arrow3::before{
+      width: 66px;
+      height: 66px;
+      border: 13px solid #FFFFFF;
+        border-bottom: none;
+    border-right: none;
+    }
+
+    .aiToolsWrap{
+      border-radius: 20px;
+    }
+  }
