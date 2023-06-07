@@ -74,6 +74,15 @@ img{
 }
 /*-------------------------------------*/
 
+.wrap{
+  margin: 0 auto;
+}
+
+.startAi{
+  background: #000;
+  max-width: 1296px;
+  margin: 0 auto;
+}
 
 .header{
 	padding-top: 20px;
@@ -109,12 +118,11 @@ img{
   margin-bottom: 60px;
 	font-weight: 900;
 }
-.intro a{
+.startbtn{
   font-weight: 900;
   font-size: 20px;
 	border: 1px solid #FFFFFF;
 	border-radius: 16px;
-	max-width: 160px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	padding-left: 40px;
@@ -122,7 +130,7 @@ img{
 	text-align: center;
 }
 
-.intro a:hover{
+.startbtn:hover{
 	background: #FFFFFF;
 	color: #020202;
 }
@@ -291,14 +299,6 @@ h3{
   width: 150px;
 }
 /*z-index設定元素的堆疊順序，設定值越高越前面，可以為負數，例如：z-index: -1。另外要注意的是z-index只能在有設定位（position）的元素上才會奏效。*/
-
-
-
-.wrap{
-  max-width: 1296px;
-  margin: 0 auto;
-
-}
 
 
 /*-------------滑動效果---------------*/
@@ -506,4 +506,320 @@ line-height: 38px;
 	border-right: none;
   }
 }
-/*--------------------------------*/
+/*---------------Ai工具頁面-----------------*/
+
+.aiToolsWrap{
+  margin-top: 160px;
+  padding-top: 160px;
+  padding-bottom: 162px;
+  border-radius: 160px;
+  background: #FFFFFF;
+  width: 100%;
+}
+
+.aiTools{
+  max-width: 1296px;
+  margin: 0 auto;
+position: relative;
+background: #FFFFFF;
+}
+
+h4{
+font-weight: 900;
+font-size: 80px;
+line-height: 120%;
+text-align: center;
+color: #020202;
+}
+
+.searchIcon{
+position: absolute;
+left: 40px;
+transform: translateY(-50%);
+color: #919191;
+z-index: 1;
+top: 203px;
+}
+
+.searchBar{
+margin-top: 80px;
+background: #F2F2F2;
+border-radius: 16px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 76px;
+font-size: 16px;
+border: none;
+width: 100%;
+}
+
+.filter{
+margin-top: 40px;
+display: flex;
+justify-content: space-between;
+align-items: center
+}
+
+.topicBtn ul{
+width: 544px;
+}
+
+.topicBtn li{
+padding-left: 16px;
+padding-right: 16px;
+padding-top: 8px;
+padding-bottom: 8px;
+border-radius: 16px;
+text-align: center;
+color: #919191;
+line-height: 150%;
+}
+
+.topicBtn .allBtn{
+background: #F2F2F2;
+font-weight: 700;
+color: #020202;
+line-height: 150%;
+}
+
+
+
+
+.filterBtn{
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 40px;
+border-radius: 16px;
+border: 1px solid #F2F2F2;
+text-decoration: none;
+line-height: 150%;
+color: #020202;
+
+}
+
+.filterBtn span{
+margin-left: 12px;
+padding-right: 32px;
+font-size: 16px;
+}
+
+.tools{
+margin-top: 40px;
+}
+
+.aiTools ul{
+display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card{
+color: #020202;
+width: 416px;
+border: 1px solid #F2F2F2;
+border-radius: 16px;
+margin-bottom: 22px;
+overflow: hidden;
+
+}
+/*放大效果參考 https://www.webdesigns.com.tw/css-zoom_in.asp*/
+.cover{
+height: 312px;
+width: 416px;
+/*隱藏在圖片放大時超出的部分*/
+overflow: hidden; 
+}
+/*滑鼠移入card時->觸發hover->"cover框"->內的"img"*/
+.card:hover .cover img{
+transform:scale(1.2,1.2);
+transition: all 0.5s ease-out;/*0.5秒 緩出效果*/
+}
+
+.cardHeader{
+height: 118px;
+width: 416px;
+padding-left: 32px;
+padding-right: 32px;
+}
+.cardHeader h1{
+font-size: 20px;
+font-weight: 900;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+padding-top: 20px;
+padding-bottom: 12px;
+
+}
+.cardHeader p{
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: #525252;
+}
+
+.content{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.topic, .hashtag{
+border-top: 1px solid #F2F2F2;
+width: 50%;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 32px;
+padding-right: 32px;
+}
+
+
+.author, .link{
+border-top: 1px solid #F2F2F2;
+text-align: right;
+width: 50%;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 32px;
+padding-right: 32px;
+}
+
+.topic{
+  font-weight: 700;
+line-height: 150%;
+}
+.link a{
+text-decoration: none;
+color: #020202;
+}
+
+.aipagination{
+--active-index: 0;
+display: flex;
+justify-content: flex-end;
+font-weight: 700;
+font-size: 14px;
+line-height: 150%;
+color: #FFFFFF;
+}
+
+.aipagination li {
+text-align: center;
+margin: 0 4px;
+}
+
+.aipagination li a{
+display: block;
+color: #020202;
+text-decoration: none;
+transition: 0.3s;
+width: 48px;
+height: 48px;
+border-radius: 16px;
+line-height: 320%;
+}
+
+.aipagination li a.next{
+line-height: 400%;
+}
+
+.aipagination li.page-number:hover a {
+color: white;
+background: #777;
+    }
+
+.aipagination li.page-number.active a {
+color: white;
+background: #020202;
+    }
+
+.aipagination li a.next:hover span {
+color: hsl(0, 0%, 50%);
+}
+/*---------------頁尾-----------------*/
+.aiFooter{
+  background: #000;
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footerbtn{
+  padding-right: 32px;
+  width: 188px;
+}
+
+.footerbtn span{
+  margin-left: 12px;
+  font-size: 17px;
+}
+
+.aiFooter h2{
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-left: 336px;
+  padding-right: 336px;
+  text-align: center;
+}
+
+.footermenu{
+  max-width: 1296px;
+  margin: 0 auto;
+  margin-top: 160px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footermenu h4{
+  color: #FFFFFF;
+}
+
+.footernav{
+
+}
+.footerlogo{
+  width: 244.99px;
+  height: 40px;
+}
+
+.footerlink{
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.follow{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.follow ul{
+  display: flex;
+  text-align: center;
+}
+.sns{
+margin-right: 20px;
+}
+
+.copyright{
+  margin-right: 100px;
+}
+
+.back{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.back span{
+  width: 16px;
+  height: 16px;
+  font-size: 13px;
+  margin-left: 12px;
+}

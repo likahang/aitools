@@ -81,3 +81,31 @@ if (breakpoint.matches === true) {
 
 breakpoint.addListener(breakpointChecker);
 breakpointChecker();
+///////////////////////////////////////////////////////////////////////////////////////
+window.onload=function(){
+let pagination = document.querySelector(".aipagination");
+let pageNumberLinks = document.querySelectorAll(".page-number a");
+let maxPageIndex = pageNumberLinks.length - 1;
+
+pageNumberLinks.forEach((pageNumberLink, activeIndex) => {
+  pageNumberLink.addEventListener("click", () => {
+    pageNumberLinks.forEach(pageNumberLink =>
+      pageNumberLink.parentElement.classList.remove("active")
+    );
+    pageNumberLink.parentElement.classList.add("active");
+    pagination.style.setProperty("--active-index", `${activeIndex}`);
+  });
+});
+
+let nextLink = document.querySelector(".next");
+nextLink.addEventListener("click", () => {
+  pageNumberLinks.forEach(pageNumberLink =>
+    pageNumberLink.parentElement.classList.remove("active")
+  );
+  let activeIndex = Number(pagination.style.getPropertyValue("--active-index"));
+  activeIndex = activeIndex < maxPageIndex ? activeIndex + 1 : maxPageIndex;
+  pageNumberLinks[activeIndex].parentElement.classList.add("active");
+  pagination.style.setProperty("--active-index", `${activeIndex}`);
+})};
+
+
