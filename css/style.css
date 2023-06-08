@@ -206,6 +206,11 @@ h2{
 	max-width: 414px;
 	margin-right: 24px;
   }
+  
+.ourservice{
+  margin-bottom: 24px;
+}
+
   .service h3{
 	max-width: 856px;
 	font-size: 48px;
@@ -459,7 +464,9 @@ align-items: center
 }
 
 .topicBtn ul{
-width: 544px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
 }
 
 .topicBtn li{
@@ -501,15 +508,18 @@ font-size: 16px;
 margin-top: 40px;
 }
 
-.aiTools ul{
+.cardList{
 display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
 }
+
+
 
 .card{
 color: #020202;
-width: 416px;
+max-width: 416px;
 border: 1px solid #F2F2F2;
 border-radius: 16px;
 margin-bottom: 22px;
@@ -519,7 +529,6 @@ overflow: hidden;
 /*放大效果參考 https://www.webdesigns.com.tw/css-zoom_in.asp*/
 .cover{
 height: 312px;
-width: 416px;
 /*隱藏在圖片放大時超出的部分*/
 overflow: hidden; 
 }
@@ -530,8 +539,6 @@ transition: all 0.5s ease-out;/*0.5秒 緩出效果*/
 }
 
 .cardHeader{
-height: 118px;
-width: 416px;
 padding-left: 32px;
 padding-right: 32px;
 }
@@ -553,6 +560,7 @@ line-height: 21px;
 letter-spacing: 0em;
 text-align: left;
 color: #525252;
+padding-bottom: 20px;
 }
 
 .content{
@@ -655,8 +663,6 @@ color: hsl(0, 0%, 50%);
 .aiFooter h2{
   padding-top: 80px;
   padding-bottom: 40px;
-  padding-left: 336px;
-  padding-right: 336px;
   text-align: center;
 }
 
@@ -720,109 +726,162 @@ margin-right: 20px;
   margin-left: 12px;
 }
 
-/*-------------iPad以下---------------*/
-@media(max-width:767px){
-  
-  .header{
-     margin-top: 8px;
-    }
-  
-  .header, .intro, .service, .partner{
-    margin-left: 12px;
-    margin-right: 12px;
-    }  
-    
+/*-------------在 iPad 直式下變更樣式---------------*/
+@media(max-width:768px){
   .wrap{
     width: 100%;
   }
-  
-  .nav img{
-    display:block;
-    margin-top: auto;
-  }
-  .nav ul{
-    display: none;
-  }
-  
-  .intro h1{
-  font-size: 48px;
-  line-height: 58px;
-  }
-  
-    .service h2{
-  font-size: 20px;
-    }
-    
-    .service h3{
-      margin-top: 24px;
-  font-size: 32px;
-  line-height: 38px;
-    }
-    
-    .feature{
-      margin-bottom: 12px;
-    }
-    
-  .service ul{
-      max-width: 100%;
-      flex-wrap: wrap;
-    justify-content: center;
-    }  
-    
-  .feature{
-    max-width: 100%;
-    }
-  
-    .swiper{
-    margin: 0 auto;
-     max-width: 375px;
-      margin-top: 60px;
-      display: block;
-    }
-    
-    .swiper-slide{
-      max-width: 351px;
-      left: 0px;
-    }
-   
-    .swiper-pagination{
-    display: block;
-  }
-    .animate{
-      justify-content: center;
-    }
-    
-    .box1,.box2,.box3{
-    width: 117px;
-    height: 117px;
-      
-  }
-    .arrow1,.arrow2,.arrow3{
-      width: 13px;
-    height: 117px;
-      
-    }
-    .arrow1::after,
-    .arrow2::after,
-    .arrow3::after{
-      width: 66px;
-      height: 66px;
-      border: 13px solid #FFFFFF;
-      border-bottom: none;
-      border-left: none;
-      
-    }
-    .arrow1::before,
-    .arrow2::before,
-    .arrow3::before{
-      width: 66px;
-      height: 66px;
-      border: 13px solid #FFFFFF;
-        border-bottom: none;
-    border-right: none;
-    }
 
-    .aiToolsWrap{
-      border-radius: 20px;
-    }
+  .swiper {
+    width: 100%;
   }
+
+  .swiper-wrapper{
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+  .swiper-slide{
+    max-width: 100%;
+  }
+  
+  .rating{
+    max-width: 100%;
+  }
+
+  .aiToolsWrap{
+    border-radius: 100px;
+  }
+
+  .searchIcon{
+    top: 303px;
+  }
+  .filter {
+    flex-wrap: wrap;
+  }
+
+  .filterBtn {
+    order:1;
+  }
+
+  .topicBtn{
+    order:2;
+    margin: auto;
+    margin-top: 16px;
+  }
+
+  .card{
+    margin: auto;
+  }
+
+  .cardList li{
+    width: 30%;
+  }
+  
+  }
+
+  /*-------------在 iPhone11 直式下變更樣式---------------*/
+@media(max-width:375px){
+  .header{
+    margin-top: 8px;
+   }
+ 
+ .header, .intro, .service, .partner{
+   margin-left: 12px;
+   margin-right: 12px;
+   }  
+   
+ .wrap{
+   width: 100%;
+ }
+ 
+ .nav img{
+   display:block;
+   margin-top: auto;
+ }
+ .nav ul{
+   display: none;
+ }
+ 
+ .intro h1{
+ font-size: 48px;
+ line-height: 58px;
+ }
+ 
+   .service h2{
+ font-size: 20px;
+   }
+   
+   .service h3{
+     margin-top: 24px;
+ font-size: 32px;
+ line-height: 38px;
+   }
+   
+   .feature{
+     margin-bottom: 12px;
+   }
+   
+ .service ul{
+     max-width: 100%;
+     flex-wrap: wrap;
+   justify-content: center;
+   }  
+   
+ .feature{
+   max-width: 100%;
+   }
+ 
+   .swiper{
+   margin: 0 auto;
+    max-width: 375px;
+     margin-top: 60px;
+     display: block;
+   }
+   
+   .swiper-slide{
+     max-width: 351px;
+     left: 0px;
+   }
+  
+   .swiper-pagination{
+   display: block;
+ }
+   .animate{
+     justify-content: center;
+   }
+   
+   .box1,.box2,.box3{
+   width: 117px;
+   height: 117px;
+     
+ }
+   .arrow1,.arrow2,.arrow3{
+     width: 13px;
+   height: 117px;
+     
+   }
+   .arrow1::after,
+   .arrow2::after,
+   .arrow3::after{
+     width: 66px;
+     height: 66px;
+     border: 13px solid #FFFFFF;
+     border-bottom: none;
+     border-left: none;
+     
+   }
+   .arrow1::before,
+   .arrow2::before,
+   .arrow3::before{
+     width: 66px;
+     height: 66px;
+     border: 13px solid #FFFFFF;
+       border-bottom: none;
+   border-right: none;
+   }
+
+   .aiToolsWrap{
+     border-radius: 20px;
+   }
+}
