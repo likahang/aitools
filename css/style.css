@@ -200,6 +200,7 @@ img{
 h2{
   font-weight: 900;
 	font-size: 32px;
+  line-height: 120%;
 }
 
   .service h2{
@@ -515,6 +516,9 @@ display: flex;
   width: 100%;
 }
 
+.cardList li{
+  margin-bottom: 24px;
+}
 
 
 .card{
@@ -522,13 +526,14 @@ color: #020202;
 max-width: 416px;
 border: 1px solid #F2F2F2;
 border-radius: 16px;
-margin-bottom: 22px;
 overflow: hidden;
+display: flex;
+flex-direction: column;
+height: 100%;
 
 }
 /*放大效果參考 https://www.webdesigns.com.tw/css-zoom_in.asp*/
 .cover{
-height: 312px;
 /*隱藏在圖片放大時超出的部分*/
 overflow: hidden; 
 }
@@ -541,6 +546,9 @@ transition: all 0.5s ease-out;/*0.5秒 緩出效果*/
 .cardHeader{
 padding-left: 32px;
 padding-right: 32px;
+flex-grow: 1;
+display: flex;
+flex-direction: column;
 }
 
 .cardHeader h1{
@@ -606,6 +614,10 @@ font-weight: 700;
 font-size: 14px;
 line-height: 150%;
 color: #FFFFFF;
+}
+
+.aipagination ul{
+  display: flex;
 }
 
 .aipagination li {
@@ -704,6 +716,7 @@ color: hsl(0, 0%, 50%);
 .follow ul{
   display: flex;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .sns{
@@ -724,6 +737,19 @@ margin-right: 20px;
   height: 16px;
   font-size: 13px;
   margin-left: 12px;
+}
+
+
+@media(max-width:1265px){
+  .cardList li{
+    width: 30%;
+  }
+}
+
+@media(max-width:866px){
+  .cardList li{
+    width: 48%;
+  }
 }
 
 /*-------------在 iPad 直式下變更樣式---------------*/
@@ -773,11 +799,34 @@ margin-right: 20px;
   .card{
     margin: auto;
   }
-
-  .cardList li{
-    width: 30%;
+  
+  .footermenu{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footernav{
+    order: 2;
+    margin-top: 40px;
   }
   
+  .footerlogo{
+    order: 1;
+  }
+
+  .follow ul{
+    text-align: left;
+  }
+  .copyright{
+    width: 80%;
+    margin-right: auto;
+  }
+
+  }
+
+  @media(max-width:487px){
+    .cardList li {
+      width: 100%;
+    }
   }
 
   /*-------------在 iPhone11 直式下變更樣式---------------*/
@@ -884,4 +933,10 @@ margin-right: 20px;
    .aiToolsWrap{
      border-radius: 20px;
    }
+
+   .cardList li{
+    width: 100%;
+  }
+
+
 }
