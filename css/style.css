@@ -218,10 +218,10 @@ h2{
     line-height: 57.6px;
   }
 .service ul{
-  
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
   .feature{
 	max-width: 32.1%;
@@ -229,15 +229,18 @@ h2{
   border: 1px solid #525252;
 	border-radius: 16px;
   }
-  .feature img{
-	padding-top: 46.67px;
-	padding-bottom: 26.67px;
-  }
+
   .feature p{
 	padding-top: 20px;
 	padding-bottom: 40px;
 	max-width: 336px;
 	font-size: 16px;
+  }
+
+  .feature span{
+    padding-top: 46.67px;
+	padding-bottom: 26.67px;
+    font-size: 80px;
   }
 
 /*-------------*/
@@ -349,7 +352,6 @@ h3{
 .rating{
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 351px;
   height: auto;
 }
 
@@ -740,6 +742,13 @@ margin-right: 20px;
 }
 
 
+@media(max-width:1296px){
+  .startAi, .aiFooter, .footermenu, .footerlink{
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
 @media(max-width:1265px){
   .cardList li{
     width: 30%;
@@ -752,28 +761,31 @@ margin-right: 20px;
   }
 }
 
+
+
 /*-------------在 iPad 直式下變更樣式---------------*/
 @media(max-width:768px){
   .wrap{
     width: 100%;
   }
 
-  .swiper {
-    width: 100%;
+ 
+  .swiper{
+    margin: 0 auto;
+     max-width: 375px;
+      margin-top: 60px;
+      display: block;
+    }
+    
+    .swiper-slide{
+      max-width: 351px;
+      left: 0px;
+    }
+   
+    .swiper-pagination{
+    display: block;
   }
 
-  .swiper-wrapper{
-    flex-direction: column;
-    max-width: 100%;
-  }
-  
-  .swiper-slide{
-    max-width: 100%;
-  }
-  
-  .rating{
-    max-width: 100%;
-  }
 
   .aiToolsWrap{
     border-radius: 100px;
@@ -823,11 +835,23 @@ margin-right: 20px;
 
   }
 
+  @media(max-width:700px){
+   .feature{
+    display: flex;
+    min-width: 100%;
+    margin-bottom: 15px;
+   }
+   .featureTopic{
+    padding-left: 20px;
+   }
+  }
+
   @media(max-width:487px){
     .cardList li {
       width: 100%;
     }
   }
+  
 
   /*-------------在 iPhone11 直式下變更樣式---------------*/
 @media(max-width:375px){
@@ -855,6 +879,7 @@ margin-right: 20px;
  .intro h1{
  font-size: 48px;
  line-height: 58px;
+ margin-top: 40px;
  }
  
    .service h2{
@@ -862,7 +887,6 @@ margin-right: 20px;
    }
    
    .service h3{
-     margin-top: 24px;
  font-size: 32px;
  line-height: 38px;
    }
@@ -873,7 +897,6 @@ margin-right: 20px;
    
  .service ul{
      max-width: 100%;
-     flex-wrap: wrap;
    justify-content: center;
    }  
    
@@ -936,6 +959,11 @@ margin-right: 20px;
 
    .cardList li{
     width: 100%;
+  }
+
+  .swiper-wrapper{
+    flex-direction: row;
+    max-width: 416px;
   }
 
 
